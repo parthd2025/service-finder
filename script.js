@@ -4,15 +4,26 @@ form.addEventListener("submit", async (e) => {
   e.preventDefault();
 
   const data = {
-    name: document.getElementById("name").value,
-    email: document.getElementById("email").value,
-    message: document.getElementById("message").value
+    providerName: form.providerName.value,
+    category: form.category.value,
+    subcategory: form.subcategory.value,
+    contact1: form.contact1.value,
+    contact2: form.contact2.value,
+    serviceArea: form.serviceArea.value
   };
 
-  await fetch("https://script.google.com/macros/s/AKfycbwfi5gSEqPWlenmj9Db4L87pw8J_rRv5PwbnRd_SRmEDtkmGgx9uirjoRPNBucmhy_L/execL", {
-    method: "POST",
-    body: JSON.stringify(data)
-  });
+  try {
+    await fetch("YOUR_SCRIPT_URL", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data)
+    });
 
-  alert("Data submitted!");
+    alert("Data added successfully!");
+    form.reset();
+
+  } catch (err) {
+    console.error(err);
+    alert("Error submitting data");
+  }
 });
