@@ -1,17 +1,17 @@
-<form id="form">
+<div class="search-section">
+  <h2>Search Services</h2>
 
-  <input type="text" name="providerName" placeholder="Service Provider Name" required>
+  <select id="categoryFilter">
+    <option value="">Select Category</option>
+  </select>
 
-  <input type="text" name="category" placeholder="Category" required>
+  <select id="areaFilter">
+    <option value="">Select Area</option>
+  </select>
 
-  <input type="text" name="subcategory" placeholder="Subcategory">
+  <button onclick="searchServices()">Search</button>
 
-  <input type="tel" name="contact1" placeholder="Contact 1" required>
+  <h3 id="resultCount"></h3>
+</div>
 
-  <input type="tel" name="contact2" placeholder="Contact 2">
-
-  <input type="text" name="serviceArea" placeholder="Service Area">
-
-  <button type="submit">Submit</button>
-
-</form>
+<div id="results"></div>

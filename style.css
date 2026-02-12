@@ -1,11 +1,76 @@
 body {
-  font-family: Arial;
-  padding: 40px;
+  font-family: Arial, sans-serif;
+  background: #f5f6fa;
+  margin: 0;
+  padding: 20px;
 }
 
-input, textarea {
-  display: block;
-  margin: 10px 0;
+h1, h2 {
+  text-align: center;
+  color: #333;
+}
+
+/* Form & search container */
+
+form,
+.search-section {
+  max-width: 900px;
+  margin: 20px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Inputs */
+
+input,
+select,
+button {
   padding: 10px;
-  width: 300px;
+  margin: 8px 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+/* Buttons */
+
+button {
+  background: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+/* Results */
+
+#results {
+  max-width: 900px;
+  margin: 20px auto;
+}
+
+.card {
+  background: white;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+  margin-top: 0;
+  color: #007bff;
+}
+
+/* Result count */
+
+#resultCount {
+  text-align: center;
+  font-weight: bold;
 }
