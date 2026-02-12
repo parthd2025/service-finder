@@ -1,17 +1,24 @@
-<div class="search-section">
-  <h2>Search Services</h2>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Service Finder</title>
+</head>
+<body>
 
-  <select id="categoryFilter">
-    <option value="">Select Category</option>
-  </select>
+<h2>Find a Service</h2>
 
-  <select id="areaFilter">
-    <option value="">Select Area</option>
-  </select>
+<select id="categoryFilter" onchange="searchServices()">
+  <option value="">All Categories</option>
+</select>
 
-  <button onclick="searchServices()">Search</button>
+<select id="areaFilter" onchange="searchServices()">
+  <option value="">All Areas</option>
+</select>
 
-  <h3 id="resultCount"></h3>
-</div>
-
+<div id="resultCount"></div>
 <div id="results"></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
